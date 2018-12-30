@@ -19,7 +19,8 @@ public class CustomUserDetailsService implements UserDetailsService {
     public void init() {
         // this data would typically be retrieved from a database
         this.accountDetails = new TreeMap<>();
-        this.accountDetails.put("ted", "$2a$06$rtacOjuBuSlhnqMO2GKxW.Bs8J6KI0kYjw/gtF0bfErYgFyNTZRDm");
+        this.accountDetails.put("admin", "$2a$10$zC2M18QWQFfx9SQsGP.ikOhL5as.reLkzzpc1Js4.Cjvp/5fuD596");
+        //Should change the password to for example: `2J8hO0qOJqtsGL2GCLZT` over `admin`
     }
 
     @Override
@@ -35,6 +36,6 @@ public class CustomUserDetailsService implements UserDetailsService {
                 true,
                 true,
                 true,
-                Arrays.asList(new SimpleGrantedAuthority("USER")));
+                Arrays.asList(new SimpleGrantedAuthority("ADMIN")));
     }
 }
